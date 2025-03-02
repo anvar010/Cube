@@ -38,49 +38,7 @@
 			}
 		}
 
-		.cube {
-			position: relative;
-			width: 200px;
-			height: 200px;
-			transform-style: preserve-3d;
-			animation: rotateCube 8s infinite linear;
-		}
-
-		@keyframes rotateCube {
-			from {
-				transform: rotateX(0deg) rotateY(0deg);
-			}
-			to {
-				transform: rotateX(360deg) rotateY(360deg);
-			}
-		}
-
-		.outer-cube,
-		.inner-cube {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			transform-style: preserve-3d;
-		}
-
-		.outer-cube div,
-		.inner-cube div {
-			position: absolute;
-			width: 200px;
-			height: 200px;
-			background-size: cover;
-			background-position: center;
-			border: 2px solid rgba(255, 255, 255, 0.8);
-			box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-		}
-
-		/* Position cube faces */
-		.outer-top, .inner-top { transform: rotateX(90deg) translateZ(100px); }
-		.outer-bottom, .inner-bottom { transform: rotateX(-90deg) translateZ(100px); }
-		.outer-front, .inner-front { transform: translateZ(100px); }
-		.outer-back, .inner-back { transform: rotateY(180deg) translateZ(100px); }
-		.outer-left, .inner-left { transform: rotateY(-90deg) translateZ(100px); }
-		.outer-right, .inner-right { transform: rotateY(90deg) translateZ(100px); }
+		
 
 		.message {
 			margin-top: 20px;
