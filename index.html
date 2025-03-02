@@ -3,10 +3,100 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=div, initial-scale=1.0">
-	<meta name="title" content="3D Cube - For Crush |">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="title" content="3D Cube - Love Surprise 💖">
+	<meta name="description" content="A beautiful 3D rotating cube filled with memories for someone special.">
+	<meta name="author" content="Your Name">
 	<link rel="stylesheet" href="./css/program.css">
-	<title>3D Cube - For Crush | </title>
+	<title>3D Cube - Love Surprise 💖</title>
+	<style>
+		body {
+			background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			flex-direction: column;
+			overflow: hidden;
+			font-family: "Arial", sans-serif;
+		}
+
+		.title {
+			font-size: 2rem;
+			color: white;
+			text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+			margin-bottom: 20px;
+			animation: heartbeat 1.5s infinite alternate;
+		}
+
+		@keyframes heartbeat {
+			0% {
+				transform: scale(1);
+			}
+			100% {
+				transform: scale(1.1);
+			}
+		}
+
+		.cube {
+			position: relative;
+			width: 200px;
+			height: 200px;
+			transform-style: preserve-3d;
+			animation: rotateCube 8s infinite linear;
+		}
+
+		@keyframes rotateCube {
+			from {
+				transform: rotateX(0deg) rotateY(0deg);
+			}
+			to {
+				transform: rotateX(360deg) rotateY(360deg);
+			}
+		}
+
+		.outer-cube,
+		.inner-cube {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			transform-style: preserve-3d;
+		}
+
+		.outer-cube div,
+		.inner-cube div {
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			background-size: cover;
+			background-position: center;
+			border: 2px solid rgba(255, 255, 255, 0.8);
+			box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+		}
+
+		/* Position cube faces */
+		.outer-top, .inner-top { transform: rotateX(90deg) translateZ(100px); }
+		.outer-bottom, .inner-bottom { transform: rotateX(-90deg) translateZ(100px); }
+		.outer-front, .inner-front { transform: translateZ(100px); }
+		.outer-back, .inner-back { transform: rotateY(180deg) translateZ(100px); }
+		.outer-left, .inner-left { transform: rotateY(-90deg) translateZ(100px); }
+		.outer-right, .inner-right { transform: rotateY(90deg) translateZ(100px); }
+
+		.message {
+			margin-top: 20px;
+			color: white;
+			font-size: 1.2rem;
+			text-align: center;
+		}
+
+		#copy {
+			position: absolute;
+			bottom: 10px;
+			color: white;
+			font-size: 0.9rem;
+			text-align: center;
+		}
+	</style>
 </head>
 
 <body>
@@ -15,61 +105,33 @@
 	</div>
 
 	<div class="cube">
-		
 		<div class="outer-cube">
-			<div class="outer-top">
-				<img src="images/r1.jpeg" />
-			</div>
-			<div class="outer-bottom">
-				<img src="images/r2.jpeg" />
-			</div>
-			<div class="outer-front">
-				<img src="images/r-3.jpeg" />
-			</div>
-			<div class="outer-back">
-				<img src="images/r1.jpeg" />
-			</div>
-			<div class="outer-left">
-				<img src="images/r2.jpeg" />
-			</div>
-			<div class="outer-right">
-				<img src="images/r-3.jpeg" />
-			</div>
+			<div class="outer-top" style="background-image: url('images/r1.jpeg');"></div>
+			<div class="outer-bottom" style="background-image: url('images/r2.jpeg');"></div>
+			<div class="outer-front" style="background-image: url('images/r-3.jpeg');"></div>
+			<div class="outer-back" style="background-image: url('images/r1.jpeg');"></div>
+			<div class="outer-left" style="background-image: url('images/r2.jpeg');"></div>
+			<div class="outer-right" style="background-image: url('images/r-3.jpeg');"></div>
 		</div>
-		<!-- 内层立方体 -->
+
 		<div class="inner-cube">
-			<div class="inner-top">
-				<img src="images/r1.jpeg" />
-			</div>
-			<div class="inner-bottom">
-				<img src="images/r2.jpeg" />
-			</div>
-			<div class="inner-front">
-				<img src="images/r-3.jpeg" />
-			</div>
-			<div class="inner-back">
-				<img src="images/r1.jpeg" />
-			</div>
-			<div class="inner-left">
-				<img src="images/r2.jpeg" />
-			</div>
-			<div class="inner-right">
-				<img src="images/r-3.jpeg" />
-			</div>
-		</div>
-	</div>
-	<div>
-		<div class="message">
-			<div class="tip">
-				<!-- Tip: Move the mouse in and out of the cube and the effect will be displayed! -->
-			</div>
+			<div class="inner-top" style="background-image: url('images/r1.jpeg');"></div>
+			<div class="inner-bottom" style="background-image: url('images/r2.jpeg');"></div>
+			<div class="inner-front" style="background-image: url('images/r-3.jpeg');"></div>
+			<div class="inner-back" style="background-image: url('images/r1.jpeg');"></div>
+			<div class="inner-left" style="background-image: url('images/r2.jpeg');"></div>
+			<div class="inner-right" style="background-image: url('images/r-3.jpeg');"></div>
 		</div>
 	</div>
 
+	<div class="message">
+		"Love is not about how many days, months, or years you have been together.  
+		It's all about how much you love each other every single day."
+	</div>
+
 	<div id="copy">
-		<p class="text-center text-white text-sm"><a
-			href=""</a></p>
-	  </div>
+		Made with 💖 for someone special.
+	</div>
 </body>
 
 </html>
